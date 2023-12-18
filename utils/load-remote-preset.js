@@ -1,7 +1,7 @@
 const fs = require("fs-extra")
 
 const remotePresetMap = {
-  mobx: "Walker-Leee/react-temp-mobx",
+  react: "tototi5997/zli-template",
 }
 
 // 远程仓库下载指定模板到临时目录
@@ -10,9 +10,9 @@ module.exports = async function (name, targetDir, clone) {
   const path = require("path")
   const download = require("download-git-repo")
 
-  const tempDir = path.join(os.tmpdir(), "zli")
+  const tmpdir = path.join(os.tmpdir(), "zli")
 
-  await fs.remove(tempDir)
+  await fs.remove(tmpdir)
   await new Promise((resolve, reject) => {
     download(remotePresetMap[name], tmpdir, { clone }, (err) => {
       if (err) return reject(err)
@@ -22,6 +22,6 @@ module.exports = async function (name, targetDir, clone) {
 
   return {
     targetDir,
-    tempDir
+    tmpdir
   }
 }

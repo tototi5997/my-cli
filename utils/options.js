@@ -1,4 +1,4 @@
-exports.defaultPreset = 'mobx'
+exports.defaultPreset = 'react'
 
 exports.defaults = {
   lastChecked: undefined,
