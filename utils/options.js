@@ -1,4 +1,4 @@
-exports.defaultPreset = 'react'
+exports.defaultPreset = 'react-ts'
 
 exports.defaults = {
   lastChecked: undefined,
