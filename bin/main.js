@@ -28,4 +28,13 @@ program
     require("../lib/checkEnv")()
   })
 
+program
+  .command("tree")
+  .description("view tree")
+  .option("-d, --deep", "tree deep")
+  .action((_, options) => {
+    console.log(options.deep)
+    require("../utils/tree")(process.cwd(), '', 0)
+  })
+
 program.parse(process.argv)
