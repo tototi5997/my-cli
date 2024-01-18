@@ -1,7 +1,7 @@
 const fs = require("fs-extra")
 
 const remotePresetMap = {
-  'react-ts': "tototi5997/zli-template",
+  "react-ts": "tototi5997/zli-template#main",
 }
 
 // 远程仓库下载指定模板到临时目录
@@ -22,6 +22,6 @@ module.exports = async function (name, targetDir, clone) {
 
   return {
     targetDir,
-    tmpdir
+    tmpdir,
   }
 }

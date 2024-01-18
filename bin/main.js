@@ -12,6 +12,7 @@ program
   .option("-d, --default", "使用默认的预设")
   .option("-f, --force", "强制性覆盖创建")
   .option("-p, --preset", "设置预设")
+  .option("-c, --clone", "使用 git clone 方式创建")
   .action((name, options) => {
     if (minimist(process.argv.slice(3))._.length > 1) {
       console.log(chalk.yellow("检测到您输入了多个名称，将以第一个参数作为项目名"))
